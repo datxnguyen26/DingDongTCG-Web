@@ -3,7 +3,7 @@ import { HiMenuAlt4, HiX } from 'react-icons/hi';
 import { motion } from 'framer-motion';
 import { images } from '../../constants';
 import { AiOutlineShoppingCart } from "react-icons/ai";
-
+/*THIS IS A TEST */
 import './Navbar.scss';
 
 const Navbar = () => {
