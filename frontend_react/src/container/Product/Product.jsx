@@ -13,7 +13,7 @@ export async function getPosts() {
 const Product = () => {
 
   const [data, setData] = useState([])
-
+  
   useEffect(() => {
     fetchData();
   }, []);
