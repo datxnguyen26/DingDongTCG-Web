@@ -1,0 +1,13 @@
+ .app__products {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 16rem 1rem 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    row-gap: 10rem;
+    
+ }
