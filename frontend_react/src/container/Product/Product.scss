@@ -1,13 +1,61 @@
  .app__products {
     display: flex;
     flex: 1;
-    align-items: center;
-    justify-content: center;
+   
     flex-direction: column;
-    padding: 16rem 1rem 0;
+    padding: 16rem 0;
     width: 100%;
-    height: 100%;
     background-color: white;
-    row-gap: 10rem;
+    row-gap: 1rem;
+    flex-wrap: wrap;
     
+ }
+
+ .sve-heading {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+
+   h1 {
+      color: #ffdd55;
+   }
+
+   span {
+      color:black;
+      font-size: 26px;
+      font-weight: 500;
+   }
+ }
+
+ .sve-products {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   justify-content: flex-start;
+   width: 80%;
+   margin: auto;
+   row-gap: 1rem;
+   flex-wrap: wrap;
+ }
+
+ .sve1 {
+   display: flex;
+   justify-content: center;
+   flex-direction: row;
+   gap: 30px;
+   flex-wrap: wrap;
+   margin-bottom: 40px;
+ }
+
+ 
+ .sve2 {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   gap: 30px;
+ }
+
+ .sve1-heading p {
+  color: #ffdd55;
  }

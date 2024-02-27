@@ -1,5 +1,5 @@
 import React from 'react'
-import { Slider, Navbar, Product } from './container/index'
+import { Slider, Navbar, Product, Footer } from './container/index'
 import './App.scss'; 
 
 const App = () => {
@@ -8,6 +8,7 @@ const App = () => {
       
       <Navbar />
       <Product />
+      <Footer />
   
     </div>
   )

@@ -12,7 +12,8 @@ export async function getPosts() {
 
 const Product = () => {
 
-  const [data, setData] = useState([])
+  const [sveItem1, setsveItem1] = useState([])
+  const [sveItem2, setsveItem2] = useState([])
   
   useEffect(() => {
     fetchData();
@@ -20,22 +21,36 @@ const Product = () => {
 
   const fetchData = async () => {
     try {
-      const response = await client.fetch('*[_type == "sveproducts"]')
-      
-      setData(response);
+      const response1 = await client.fetch('*[_type == "sveproducts" && id=="01"]')
+      const response2 = await client.fetch('*[_type == "sveproducts" && id=="01"]')
+      setsveItem1(response1);
+      setsveItem2(response2);
     } catch (error) {
       console.error('Error fetching data:', error);
     }
   } 
   
   return (
-    <div className='app__products'>
-        <div className='product-heading'>
-            <h2>Shadowverse Evolve</h2>
-            <p> Sealed Product and Craft Splits</p>
+    <div className='app__products' id="sve">
+        <div className='sve-heading'>
+            <h1>Shadowverse Evolve</h1>
+            <span> Sealed Product and Craft Splits</span>
         </div>
-        <div className="products-container">
-          {data?.map((product) => <ProductItem key={product._id} product={product} />)}
+        <div className="sve-products">
+          <div className='sve1-heading'>
+            <h2> Set 4: Cosmic Mythos</h2>
+            <p>Ships by 4/9</p>
+          </div>
+          <div className='sve1'>
+            {sveItem1?.map((product) => <ProductItem key={product._id} product={product} />)}
+          </div>
+          <div className='sve1-heading'>
+            <h2> Set 5: Omen Eternals</h2>
+            <p>Ships by 6/9</p>
+          </div>
+          <div className='sve2'>
+            {sveItem2?.map((product) => <ProductItem key={product._id} product={product} />)}
+          </div>
         </div>
 
     </div>

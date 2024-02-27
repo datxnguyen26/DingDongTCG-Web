@@ -22,6 +22,11 @@ export default {
             type: 'string',
         },
         {
+            name: 'id',
+            title: 'ID',
+            type: 'string'
+        },
+        {
             name: 'slug',
             title: 'Slug',
             type: 'slug',
