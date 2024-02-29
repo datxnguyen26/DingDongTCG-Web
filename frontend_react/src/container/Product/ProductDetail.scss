@@ -1,0 +1,16 @@
+.H {
+    
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.box {
+    padding: 16rem 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+}
+ 

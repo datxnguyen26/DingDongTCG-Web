@@ -6,7 +6,7 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 /*THIS IS A TEST */
 import './Navbar.scss';
 
-const Navbar = () => {
+const Navbar = ({homeRef, sveRef, cfvRef, weissRef}) => {
 
 const [toggle, setToggle] = useState(false);
 return (
@@ -21,10 +21,10 @@ return (
                 transition={{ duration: .75, ease: 'easeInOut' }}
             >            
                 <ul className='app__navbar-links'>
-                    <li className='app__flex p-text'><a href="#home">Home</a></li>
-                    <li className='app__flex p-text'><a href="#sve">SVE Products</a></li>
-                    <li className='app__flex p-text'><a href="#cfv">CFV Products</a></li>
-                    <li className='app__flex p-text'><a href="#weiss">Weiss Schwarz Products</a></li>
+                    <li className='app__flex p-text'><a onClick={() => setToggle(false)} href='/'>Home</a></li>
+                    <li className='app__flex p-text'><a onClick={() => setToggle(false)} href={{sveRef}}>SVE Products</a></li>
+                    <li className='app__flex p-text'><a onClick={() => setToggle(false)} href="#cfv">CFV Products</a></li>
+                    <li className='app__flex p-text'><a onClick={() => setToggle(false)} href="#weiss">Weiss Schwarz Products</a></li>
                 </ul>
             </motion.div>
             )}
@@ -33,10 +33,10 @@ return (
             <img src={images.logo} alt="Store logo" />
         </div>
         <ul className='app__navbar-links'>
-            <li className='app__flex p-text'><div></div><a href="#home">Home</a></li>
-            <li className='app__flex p-text'><div /><a href="#sve">SVE Products</a></li>
-            <li className='app__flex p-text'><div /><a href="#cfv">CFV Products</a></li>
-            <li className='app__flex p-text'><div /><a href="#weiss">Weiss Products</a></li>
+            <li className='app__flex p-text'><div></div><a href={homeRef}>Home</a></li>
+            <li className='app__flex p-text'><div /><a href={sveRef}>SVE Products</a></li>
+            <li className='app__flex p-text'><div /><a href={cfvRef}>CFV Products</a></li>
+            <li className='app__flex p-text'><div /><a href={weissRef}>Weiss Products</a></li>
         </ul>
         <AiOutlineShoppingCart size={60} />
     

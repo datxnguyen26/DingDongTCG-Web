@@ -3,6 +3,8 @@ import './Product.scss'
 import ProductItem from './ProductItem'
 import { client } from '../../client'
 import { AiOutlineSync } from 'react-icons/ai'
+import { Link } from 'react-router-dom'
+
 
 
 export async function getPosts() {
@@ -22,7 +24,7 @@ const Product = () => {
   const fetchData = async () => {
     try {
       const response1 = await client.fetch('*[_type == "sveproducts" && id=="01"]')
-      const response2 = await client.fetch('*[_type == "sveproducts" && id=="01"]')
+      const response2 = await client.fetch('*[_type == "sveproducts" && id=="02"]')
       setsveItem1(response1);
       setsveItem2(response2);
     } catch (error) {
